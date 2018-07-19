@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="question_one">How many legs does a spider have?</string>
+    <string name="two">2</string>
+    <string name="four">4</string>
+    <string name="six">6</string>
+    <string name="eight">8</string>
+    <string name="question_two">What color is a bumble bee?</string>
+    <string name="red">Red</string>
+    <string name="black_and_yellow">Black and Yellow</string>
+    <string name="green_and_yellow">Green and Yellow</string>
+    <string name="purple">Purple</string>
+    <string name="question_three">Which of the following animals has fur?</string>
+    <string name="bird">Bird</string>
+    <string name="cat">Cat</string>
+    <string name="whale">Whale</string>
+    <string name="snake">Snake</string>
+    <string name="question_four">Which animal lives in the ocean?</string>
+    <string name="eagle">Eagle</string>
+    <string name="dog">Dog</string>
+    <string name="fish">Fish</string>
+    <string name="lion">Lion</string>
+    <string name="question_five">What does a rabbit eat?</string>
+    <string name="lettuce">Lettuce</string>
+    <string name="mice">Mice</string>
+    <string name="plankton">Plankton</string>
+    <string name="hamburger">Hamburgers</string>
+    <string name="score">Correct ansers: </string>
+    <string name="get_score">Get Score</string>
+</resources>

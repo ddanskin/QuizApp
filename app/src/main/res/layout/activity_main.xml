@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_one" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q1_option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionOne"
+                android:text="@string/two" />
+
+            <RadioButton
+                android:id="@+id/q1_option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionOne"
+                android:text="@string/four" />
+
+            <RadioButton
+                android:id="@+id/q1_option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionOne"
+                android:text="@string/six" />
+
+            <RadioButton
+                android:id="@+id/q1_option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionOne"
+                android:text="@string/eight" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_two" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q2_option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionTwo"
+                android:text="@string/red" />
+
+            <RadioButton
+                android:id="@+id/q2_option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionTwo"
+                android:text="@string/black_and_yellow" />
+
+            <RadioButton
+                android:id="@+id/q2_option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionTwo"
+                android:text="@string/green_and_yellow" />
+
+            <RadioButton
+                android:id="@+id/q2_option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionTwo"
+                android:text="@string/purple" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_three" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q3_option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionThree"
+                android:text="@string/bird" />
+
+            <RadioButton
+                android:id="@+id/q3_option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionThree"
+                android:text="@string/cat" />
+
+            <RadioButton
+                android:id="@+id/q3_option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionThree"
+                android:text="@string/whale" />
+
+            <RadioButton
+                android:id="@+id/q3_option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionThree"
+                android:text="@string/snake" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_four" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q4_option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionFour"
+                android:text="@string/eagle" />
+
+            <RadioButton
+                android:id="@+id/q4_option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionFour"
+                android:text="@string/dog" />
+
+            <RadioButton
+                android:id="@+id/q4_option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionFour"
+                android:text="@string/fish" />
+
+            <RadioButton
+                android:id="@+id/q4_option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionFour"
+                android:text="@string/lion" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_five" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/q5_option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionFive"
+                android:text="@string/lettuce" />
+
+            <RadioButton
+                android:id="@+id/q5_option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionFive"
+                android:text="@string/mice" />
+
+            <RadioButton
+                android:id="@+id/q5_option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionFive"
+                android:text="@string/plankton" />
+
+            <RadioButton
+                android:id="@+id/q5_option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="scoreQuestionFive"
+                android:text="@string/hamburger" />
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getScore"
+            android:text="@string/get_score" />
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
