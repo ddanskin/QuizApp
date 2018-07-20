@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /* This method adds up the user's scores for each question and updates the score TextView */
     public void getScore(View view) {
         int score = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
         TextView scoreTextView = (TextView) findViewById(R.id.score_text);
@@ -27,9 +28,13 @@ public class MainActivity extends AppCompatActivity {
         scoreTextView.setText(scoreMessage);
     }
 
+    /*
+     * This method updates the scoreOne variable when the user clicks on a radio button in the
+     * question's radio button group.
+     */
     public void scoreQuestionOne(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-       
+
         // Check which radio button was clicked
         if (view.getId() == R.id.q1_option4) {
             scoreOne = 1;
@@ -39,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
+     * This method updates the scoreTwo variable when the user clicks on a radio button in the
+     * question's radio button group.
+     */
     public void scoreQuestionTwo(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -50,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+     * This method updates the scoreThree variable when the user clicks on a radio button in the
+     * question's radio button group.
+     */
     public void scoreQuestionThree(View view) {
         boolean checked = ((RadioButton) view).isChecked();
         String logMessage = "scoreQuestionThree " + Integer.toString(view.getId());
@@ -62,6 +75,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+     * This method updates the scoreFour variable when the user clicks on a radio button in the
+     * question's radio button group.
+     */
     public void scoreQuestionFour(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -72,7 +89,10 @@ public class MainActivity extends AppCompatActivity {
             scoreFour = 0;
         }
     }
-
+    /*
+     * This method updates the scoreFive variable when the user clicks on a radio button in the
+     * question's radio button group.
+     */
     public void scoreQuestionFive(View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
