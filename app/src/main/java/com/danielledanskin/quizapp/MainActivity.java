@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public void getScore(View view) {
         int score = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
         TextView scoreTextView = (TextView) findViewById(R.id.score_text);
-        String scoreMessage = getString(R.string.get_score) + Integer.toString(score);
+        String scoreMessage = getString(R.string.your_score) + " " + Integer.toString(score);
         scoreTextView.setText(scoreMessage);
     }
 

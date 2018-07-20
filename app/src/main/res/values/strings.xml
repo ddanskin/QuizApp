@@ -27,4 +27,5 @@
     <string name="hamburger">Hamburgers</string>
     <string name="score">Correct ansers: </string>
     <string name="get_score">Get Score</string>
+    <string name="your_score">Your score is: </string>
 </resources>
