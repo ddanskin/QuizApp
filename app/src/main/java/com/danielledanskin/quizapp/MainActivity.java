@@ -2,6 +2,7 @@ package com.danielledanskin.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -28,10 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void scoreQuestionOne(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
+       
         // Check which radio button was clicked
         if (view.getId() == R.id.q1_option4) {
-               scoreOne = 1;
+            scoreOne = 1;
+        } else {
+            scoreOne = 0;
         }
 
     }
@@ -42,15 +45,20 @@ public class MainActivity extends AppCompatActivity {
         // Check which radio button was clicked
         if (view.getId() == R.id.q2_option2) {
             scoreTwo = 1;
+        } else {
+            scoreTwo = 0;
         }
     }
 
     public void scoreQuestionThree(View view) {
         boolean checked = ((RadioButton) view).isChecked();
-
+        String logMessage = "scoreQuestionThree " + Integer.toString(view.getId());
+        Log.v("MainActivity", logMessage);
         // Check which radio button was clicked
         if (view.getId() == R.id.q3_option2) {
-            scoreTwo = 1;
+            scoreThree = 1;
+        } else {
+            scoreThree = 0;
         }
     }
 
@@ -59,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Check which radio button was clicked
         if (view.getId() == R.id.q4_option3) {
-            scoreTwo = 1;
+            scoreFour = 1;
+        } else {
+            scoreFour = 0;
         }
     }
 
@@ -68,7 +78,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Check which radio button was clicked
         if (view.getId() == R.id.q5_option1) {
-            scoreTwo = 1;
+            scoreFive = 1;
+        } else {
+            scoreFive = 0;
         }
     }
 }
