@@ -207,9 +207,5 @@
             android:onClick="getScore"
             android:text="@string/get_score" />
 
-        <TextView
-            android:id="@+id/score_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>

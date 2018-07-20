@@ -3,9 +3,13 @@ package com.danielledanskin.quizapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     int scoreOne = 0;
@@ -23,9 +27,20 @@ public class MainActivity extends AppCompatActivity {
     /* This method adds up the user's scores for each question and updates the score TextView */
     public void getScore(View view) {
         int score = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
-        TextView scoreTextView = (TextView) findViewById(R.id.score_text);
         String scoreMessage = getString(R.string.your_score) + " " + Integer.toString(score);
+
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.custom_toast,
+                (ViewGroup) findViewById(R.id.custom_toast_container));
+
+        TextView scoreTextView = (TextView) layout.findViewById(R.id.score_text);
         scoreTextView.setText(scoreMessage);
+
+        Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(layout);
+        toast.show();
     }
 
     /*
