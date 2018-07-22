@@ -7,6 +7,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     int scoreThree = 0;
     int scoreFour = 0;
     int scoreFive = 0;
+    int scoreSix = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     /* This method adds up the user's scores for each question and updates the score TextView */
     public void getScore(View view) {
-        int score = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive;
+        scoreQuestionSix();
+        int score = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive + scoreSix;
         String scoreMessage = getString(R.string.your_score) + " " + Integer.toString(score);
 
         LayoutInflater inflater = getLayoutInflater();
@@ -116,6 +119,23 @@ public class MainActivity extends AppCompatActivity {
             scoreFive = 1;
         } else {
             scoreFive = 0;
+        }
+    }
+    /*
+     * This method updates the scoreSix variable. If the appropriate boxes are checked, the score
+     * will be one, otherwise the score is 0.
+     */
+    private void scoreQuestionSix() {
+        CheckBox answer1 = (CheckBox) findViewById(R.id.q6_checkbox1);
+        CheckBox answer2 = (CheckBox) findViewById(R.id.q6_checkbox2);
+        CheckBox answer3 = (CheckBox) findViewById(R.id.q6_checkbox3);
+        CheckBox answer4 = (CheckBox) findViewById(R.id.q6_checkbox4);
+
+        if ( answer1.isChecked() && answer3.isChecked()
+                && !answer2.isChecked() && !answer4.isChecked() ) {
+            scoreSix = 1;
+        } else {
+            scoreSix = 0;
         }
     }
 }
