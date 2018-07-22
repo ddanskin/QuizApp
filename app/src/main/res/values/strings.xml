@@ -26,7 +26,7 @@
     <string name="plankton">Plankton</string>
     <string name="hamburger">Hamburgers</string>
     <string name="question_six">Which animals lay eggs? (Select all that apply)</string>
-    <string name="question_seven">What is the largest animal on Earth?</string>
+    <string name="question_seven">What is the largest animal on Earth? (Answer is worth two points.)</string>
     <string name="blue_whale">blue whale</string>
     <string name="hint_text">Enter answer here.</string>
     <string name="get_score">Get Score</string>

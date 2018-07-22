@@ -153,11 +153,14 @@ public class MainActivity extends AppCompatActivity {
      * If they are completely wrong, the score will be 0.
      */
     private void scoreQuestionSeven() {
-        String user_input = ((EditText) findViewById(R.id.q7_user_input)).toString();
-        user_input = user_input.toLowerCase();
-        if (user_input.equals(getString(R.string.blue_whale))) {
+        EditText userInput = (EditText) findViewById(R.id.q7_user_input);
+        String userText = userInput.getText().toString().toLowerCase();
+        String correctAnswer = getString(R.string.blue_whale);
+        String partialCorrectAnswer = getString(R.string.whale).toLowerCase();
+
+        if (userText.equals(correctAnswer)) {
             scoreSeven = 2;
-        } else if (user_input.equals(getString(R.string.whale).toLowerCase())) {
+        } else if (userText.equals(partialCorrectAnswer)) {
             scoreSeven = 1;
         } else {
             scoreSeven = 0;
