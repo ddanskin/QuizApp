@@ -2,15 +2,19 @@ package com.danielledanskin.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     int scoreOne = 0;
@@ -19,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     int scoreFour = 0;
     int scoreFive = 0;
     int scoreSix = 0;
+    int scoreSeven = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
     /* This method adds up the user's scores for each question and updates the score TextView */
     public void getScore(View view) {
         scoreQuestionSix();
-        int score = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive + scoreSix;
+        scoreQuestionSeven();
+        int score = scoreOne + scoreTwo + scoreThree + scoreFour + scoreFive
+                + scoreSix + scoreSeven;
         String scoreMessage = getString(R.string.your_score) + " " + Integer.toString(score);
 
         LayoutInflater inflater = getLayoutInflater();
@@ -107,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
             scoreFour = 0;
         }
     }
+
     /*
      * This method updates the scoreFive variable when the user clicks on a radio button in the
      * question's radio button group.
@@ -123,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
     }
     /*
      * This method updates the scoreSix variable. If the appropriate boxes are checked, the score
-     * will be one, otherwise the score is 0.
+     * will be 1, otherwise the score is 0.
      */
     private void scoreQuestionSix() {
         CheckBox answer1 = (CheckBox) findViewById(R.id.q6_checkbox1);
@@ -137,5 +145,23 @@ public class MainActivity extends AppCompatActivity {
         } else {
             scoreSix = 0;
         }
+    }
+
+    /*
+     * This method updates the scoreSeven variable. If the user input the full correct answer,
+     * the score will be 2, otherwise if they get it mostly correct they will receive 1 point.
+     * If they are completely wrong, the score will be 0.
+     */
+    private void scoreQuestionSeven() {
+        String user_input = ((EditText) findViewById(R.id.q7_user_input)).toString();
+        user_input = user_input.toLowerCase();
+        if (user_input.equals(getString(R.string.blue_whale))) {
+            scoreSeven = 2;
+        } else if (user_input.equals(getString(R.string.whale).toLowerCase())) {
+            scoreSeven = 1;
+        } else {
+            scoreSeven = 0;
+        }
+
     }
 }

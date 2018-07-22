@@ -218,7 +218,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/eagle"/>
+                android:text="@string/eagle" />
         </LinearLayout>
 
         <LinearLayout
@@ -229,7 +229,7 @@
                 android:id="@+id/q6_checkbox2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cat"/>
+                android:text="@string/cat" />
         </LinearLayout>
 
         <LinearLayout
@@ -244,7 +244,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/fish"/>
+                android:text="@string/fish" />
         </LinearLayout>
 
         <LinearLayout
@@ -259,8 +259,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/whale"/>
+                android:text="@string/whale" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/question_seven"/>
+        <EditText
+            android:id="@+id/q7_user_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/hint_text"/>
 
         <Button
             android:layout_width="wrap_content"
